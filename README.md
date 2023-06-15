@@ -1,14 +1,15 @@
-# Template Extension Specification
+# Machine Learning Dataset Extension Specification
 
-- **Title:** Template
-- **Identifier:** <https://stac-extensions.github.io/template/v1.0.0/schema.json>
-- **Field Name Prefix:** template
+- **Title:** Machine Learning Dataset
+- **Identifier:** <https://stac-extensions.github.io/ml-dataset/v1.0.0/schema.json>
+- **Field Name Prefix:** ml-dataset
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
-- **Owner**: @your-gh-handles @person2
+- **Owner**: @earthpulse
 
-This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
-This is the place to add a short introduction.
+This document explains the Machine Learning Dataset Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+
+
 
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
@@ -27,10 +28,16 @@ The fields in the table below can be used in these parts of STAC documents:
 
 | Field Name           | Type                      | Description |
 | -------------------- | ------------------------- | ----------- |
-| template:new_field   | string                    | **REQUIRED**. Describe the required field... |
-| template:xyz         | [XYZ Object](#xyz-object) | Describe the field... |
-| template:another_one | \[number]                 | Describe the field... |
-
+| ml-dataset:name   | string                    | The name of the dataset |
+| ml-dataset:tasks | string                 | List of (suggested) tasks that can be solved with the dataset |
+| ml-dataset: type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy
+| ml-dataset:inputs-type | string | Type of the inputs (text, image, satellite image, video, ... or combination)
+| ml-dataset:annotations-type | string | Type of annotations (raster, vector, ...) (not present for unsupervised learning)
+| ml-dataset:license **TO CHECK** | string | License of the dataset with terms and conditions of use
+| ml-dataset:quality | string | Quality level of the dataset
+| ml-dataset:version | float | Dataset version
+| ml-dataset:statistics | **TO DO** | Important values for describing the dataset at a high level and discover potential issues like biases or data imbalance.
+ 
 ### Additional Field Information
 
 #### template:new_field
@@ -54,7 +61,7 @@ The following types should be used as applicable `rel` types in the
 
 | Type                | Description |
 | ------------------- | ----------- |
-| fancy-rel-type      | This link points to a fancy resource. |
+| ml-dataset:splits      | Links to train, test, validation splits if defined |
 
 ## Contributing
 
