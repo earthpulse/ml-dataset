@@ -20,10 +20,10 @@ This document explains the Machine Learning Dataset Extension to the [SpatioTemp
 ## Fields
 
 The fields in the table below can be used in these parts of STAC documents:
-- [ ] Catalogs
-- [x] Collections
-- [x] Item Properties (incl. Summaries in Collections)
-- [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [x] Catalogs
+- [ ] Collections
+- [ ] Item Properties (incl. Summaries in Collections)
+- [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
 | Field Name           | Type                      | Description |
@@ -33,7 +33,6 @@ The fields in the table below can be used in these parts of STAC documents:
 | ml-dataset: type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy
 | ml-dataset:inputs-type | string | Type of the inputs (text, image, satellite image, video, ... or combination)
 | ml-dataset:annotations-type | string | Type of annotations (raster, vector, ...) (not present for unsupervised learning)
-| ml-dataset:license **TO CHECK** | string | License of the dataset with terms and conditions of use
 | ml-dataset:quality | string | Quality level of the dataset
 | ml-dataset:version | float | Dataset version
 | ml-dataset:statistics | **TO DO** | Important values for describing the dataset at a high level and discover potential issues like biases or data imbalance.
