@@ -3,17 +3,16 @@
 - **Title:** Machine Learning Dataset
 - **Identifier:** <https://stac-extensions.github.io/ml-dataset/v1.0.0/schema.json>
 - **Field Name Prefix:** ml-dataset
-- **Scope:** Item, Collection
+- **Scope:** Catalog
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @earthpulse
 
 This document explains the Machine Learning Dataset Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
 
-
 - Examples:
-  - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
-  - [Collection example](examples/collection.json): Shows the basic usage of the extension in a STAC Collection
+  - [Catalog example](examples/catalog.json): Shows the basic usage of the extension in a STAC Catalog
+  - [Sub Catalog example](examples/sub-catalog.json): Shows the basic usage of the extension in a STAC Sub Catalog
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
@@ -29,7 +28,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | Field Name           | Type                      | Description |
 | -------------------- | ------------------------- | ----------- |
 | ml-dataset:name   | string                    | The name of the dataset |
-| ml-dataset:tasks | string                 | List of (suggested) tasks that can be solved with the dataset |
+| ml-dataset:tasks | array                 | List of (suggested) tasks that can be solved with the dataset |
 | ml-dataset: type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy
 | ml-dataset:inputs-type | string | Type of the inputs (text, image, satellite image, video, ... or combination)
 | ml-dataset:annotations-type | string | Type of annotations (raster, vector, ...) (not present for unsupervised learning)
