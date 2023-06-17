@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/earthpulse/ml-dataset/tree/main/json-schema/schema.json#",
+    "$id": "https://raw.githubusercontent.com/earthpulse/ml-dataset/main/json-schema/schema.json#",
     "title": "ML Dataset Extension",
     "description": "STAC ML Dataset Extension for STAC Items and STAC Collections.",
     "oneOf": [

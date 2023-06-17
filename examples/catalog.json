@@ -16,7 +16,7 @@
     }
   ],
   "stac_extensions": [
-    "https://github.com/earthpulse/ml-dataset/tree/main/json-schema/schema.json"
+    "https://raw.githubusercontent.com/earthpulse/ml-dataset/main/json-schema/schema.json"
   ],
   "stac_version": "1.0.0",
   "type": "Catalog",
