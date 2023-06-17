@@ -29,7 +29,7 @@ The fields in the table below can be used in these parts of STAC documents:
 | -------------------- | ------------------------- | ----------- |
 | ml-dataset:name   | string                    | The name of the dataset |
 | ml-dataset:tasks | array                 | List of (suggested) tasks that can be solved with the dataset |
-| ml-dataset: type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy
+| ml-dataset:type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy
 | ml-dataset:inputs-type | string | Type of the inputs (text, image, satellite image, video, ... or combination)
 | ml-dataset:annotations-type | string | Type of annotations (raster, vector, ...) (not present for unsupervised learning)
 | ml-dataset:quality | string | Quality level of the dataset
