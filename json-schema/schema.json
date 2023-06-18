@@ -5,38 +5,6 @@
     "description": "STAC ML Dataset Extension for STAC Items and STAC Collections.",
     "oneOf": [
         {
-            "$comment": "This is the schema for STAC Items.",
-            "allOf": [
-                {
-                    "type": "object",
-                    "required": [
-                        "type",
-                        "assets"
-                    ],
-                    "properties": {
-                        "type": {
-                            "const": "Feature"
-                        },
-                        "assets": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "$ref": "#/definitions/fields"
-                            }
-                        },
-                        "links": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/fields"
-                            }
-                        }
-                    }
-                },
-                {
-                    "$ref": "#/definitions/stac_extensions"
-                }
-            ]
-        },
-        {
             "$comment": "This is the schema for STAC Catalogs.",
             "allOf": [
                 {
@@ -60,44 +28,7 @@
                     "$ref": "#/definitions/stac_extensions"
                 }
             ]
-        },
-        {
-            "$comment": "This is the schema for STAC Collections.",
-            "allOf": [
-                {
-                    "type": "object",
-                    "required": [
-                        "type"
-                    ],
-                    "properties": {
-                        "type": {
-                            "const": "Collection"
-                        },
-                        "assets": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "$ref": "#/definitions/fields"
-                            }
-                        },
-                        "links": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/fields"
-                            }
-                        },
-                        "item_assets": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "$ref": "#/definitions/fields"
-                            }
-                        }
-                    }
-                },
-                {
-                    "$ref": "#/definitions/stac_extensions"
-                }
-            ]
-        }
+        }   
     ],
     "definitions": {
         "stac_extensions": {
@@ -109,7 +40,7 @@
                 "stac_extensions": {
                     "type": "array",
                     "contains": {
-                        "const": "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+                        "const": "https://raw.githubusercontent.com/earthpulse/ml-dataset/main/json-schema/schema.json"
                     }
                 }
             }
