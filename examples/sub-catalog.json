@@ -41,12 +41,6 @@
   "ml-dataset:license": "CC-BY-4.0",
   "ml-dataset:quality": "L0",
   "ml-dataset:version": "0.1.0",
-  "ml-dataset:statistics": [
-    {
-      "name": "count",
-      "value": 10
-    }
-  ],
   "ml-dataset:type": "training",
   "title": "Flood Detection Example Training Dataset"
 }

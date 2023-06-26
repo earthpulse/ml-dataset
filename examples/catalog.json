@@ -49,11 +49,5 @@
       "type": "application/json"
     }
   ],
-  "ml-dataset:statistics": [
-    {
-      "name": "count",
-      "value": 10
-    }
-  ],
   "title": "Flood Detection Example Dataset"
 }
