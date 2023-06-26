@@ -198,12 +198,6 @@
                 },
                 "ml-dataset:statistics": {
                     "$ref": "#/definitions/statistics"
-                },
-                "links": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/fields"
-                    }
                 }
             },
             "patternProperties": {
@@ -211,7 +205,7 @@
                     "$comment": "Above, change `template` to the prefix of this extension"
                 }
             },
-            "additionalProperties": false
+            "additionalProperties": true
         },
         "statistics": {
             "title": "Statistics",
