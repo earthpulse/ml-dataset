@@ -14,7 +14,7 @@
                         "ml-dataset:name",
                         "ml-dataset:tasks",
                         "ml-dataset:inputs-type",
-                        "ml-dataset:annotation-type",
+                        "ml-dataset:annotations-type",
                         "ml-dataset:quality",
                         "ml-dataset:version"
                     ],
