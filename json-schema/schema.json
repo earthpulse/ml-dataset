@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://raw.githubusercontent.com/earthpulse/ml-dataset/main/json-schema/schema.json#",
     "title": "ML Dataset Extension",
-    "description": "STAC ML Dataset Extension for STAC Items and STAC Collections.",
+    "description": "STAC ML Dataset Extension for STAC Catalogs.",
     "oneOf": [
         {
             "$comment": "This is the schema for STAC Catalogs.",
@@ -84,12 +84,6 @@
                         "ml-dataset:version": {
                             "type": "string",
                             "title": "ML Dataset version"
-                        },
-                        "ml-dataset:splits": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/fields"
-                            }
                         },
                         "ml-dataset:statistics": {
                             "$ref": "#/definitions/statistics"
@@ -190,12 +184,6 @@
                     "type": "string",
                     "title": "ML Dataset version"
                 },
-                "ml-dataset:splits": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/fields"
-                    }
-                },
                 "ml-dataset:statistics": {
                     "$ref": "#/definitions/statistics"
                 }
@@ -205,7 +193,7 @@
                     "$comment": "Above, change `template` to the prefix of this extension"
                 }
             },
-            "additionalProperties": true
+            "additionalProperties": false
         },
         "statistics": {
             "title": "Statistics",
