@@ -11,7 +11,10 @@
                     "type": "object",
                     "required": [
                         "type",
-                        "ml-dataset:name"
+                        "ml-dataset:name",
+                        "ml-dataset:tasks",
+                        "ml-dataset:inputs-type",
+                        "ml-dataset:annotations-type"
                     ],
                     "properties": {
                         "type": {
@@ -20,6 +23,39 @@
                         "ml-dataset:name": {
                             "type": "string",
                             "title": "ML Dataset Name"
+                        },
+                        "ml-dataset:tasks": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "image classification",
+                                    "object detection",
+                                    "segmentation"
+                                ]
+                            },
+                            "title": "ML Dataset tasks"
+                        },
+                        "ml-dataset:inputs-type": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "text",
+                                    "image",
+                                    "satellite imagery",
+                                    "video"
+                                ]
+                            },
+                            "title": "ML Dataset Inputs type"
+                        },
+                        "ml-dataset:annotations-type": {
+                            "type": "string",
+                            "enum": [
+                                "raster",
+                                "vector"
+                            ],
+                            "title": "ML Dataset Annotations type"
                         },
                         "links": {
                             "type": "array",
@@ -57,6 +93,39 @@
                 "ml-dataset:name": {
                     "type": "string",
                     "title": "ML Dataset Name"
+                },
+                "ml-dataset:tasks": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "image classification",
+                            "object detection",
+                            "segmentation"
+                        ]
+                    },
+                    "title": "ML Dataset tasks"
+                },
+                "ml-dataset:inputs-type": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "text",
+                            "image",
+                            "satellite imagery",
+                            "video"
+                        ]
+                    },
+                    "title": "ML Dataset Inputs type"
+                },
+                "ml-dataset:annotations-type": {
+                    "type": "string",
+                    "enum": [
+                        "raster",
+                        "vector"
+                    ],
+                    "title": "ML Dataset Annotations type"
                 }
             },
             "patternProperties": {
