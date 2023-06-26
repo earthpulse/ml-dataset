@@ -106,7 +106,7 @@
                     "$ref": "#/definitions/stac_extensions"
                 }
             ]
-        }   
+        }
     ],
     "definitions": {
         "stac_extensions": {
@@ -190,8 +190,20 @@
                     "type": "string",
                     "title": "ML Dataset version"
                 },
+                "ml-dataset:splits": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/fields"
+                    }
+                },
                 "ml-dataset:statistics": {
                     "$ref": "#/definitions/statistics"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/fields"
+                    }
                 }
             },
             "patternProperties": {
