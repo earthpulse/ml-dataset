@@ -76,7 +76,7 @@
                             "title": "ML Dataset quality"
                         },
                         "ml-dataset:version": {
-                            "type": "number",
+                            "type": "string",
                             "title": "ML Dataset version"
                         },
                         "ml-dataset:splits": {
@@ -178,7 +178,7 @@
                     "title": "ML Dataset quality"
                 },
                 "ml-dataset:version": {
-                    "type": "number",
+                    "type": "string",
                     "title": "ML Dataset version"
                 }
             },

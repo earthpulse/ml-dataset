@@ -40,7 +40,7 @@
   "ml-dataset:annotations-type": "raster",
   "ml-dataset:license": "CC-BY-4.0",
   "ml-dataset:quality": "L0",
-  "ml-dataset:version": 1.0,
+  "ml-dataset:version": "0.1.0",
   "ml-dataset:statistics": [
     {}
   ],
