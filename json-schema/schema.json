@@ -91,6 +91,9 @@
                                 "$ref": "#/definitions/fields"
                             }
                         },
+                        "ml-dataset:statistics": {
+                            "$ref": "#/definitions/statistics"
+                        },
                         "links": {
                             "type": "array",
                             "items": {
@@ -186,6 +189,9 @@
                 "ml-dataset:version": {
                     "type": "string",
                     "title": "ML Dataset version"
+                },
+                "ml-dataset:statistics": {
+                    "$ref": "#/definitions/statistics"
                 }
             },
             "patternProperties": {
@@ -194,6 +200,29 @@
                 }
             },
             "additionalProperties": false
+        },
+        "statistics": {
+            "title": "Statistics",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "title": "Statistic",
+                "type": "object",
+                "required": [
+                    "name",
+                    "value"
+                ],
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "value": {
+                        "title": "Value",
+                        "type": "number"
+                    }
+                }
+            }
         }
     }
 }

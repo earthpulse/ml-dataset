@@ -42,7 +42,9 @@
   "ml-dataset:quality": "L0",
   "ml-dataset:version": "0.1.0",
   "ml-dataset:statistics": [
-    {}
+    {
+      "count": 12
+    }
   ],
   "ml-dataset:type": "training",
   "title": "Flood Detection Example Training Dataset"
