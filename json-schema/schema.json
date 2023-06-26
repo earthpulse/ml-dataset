@@ -20,6 +20,69 @@
                             "type": "string",
                             "title": "ML Dataset Name"
                         },
+                        "ml-dataset:tasks": {
+                            "type": "array",
+                            "enum": [
+                                "image classification",
+                                "object detection",
+                                "segmentation"
+                            ],
+                            "title": "ML Dataset tasks"
+                        },
+                        "ml-dataset:type": {
+                            "type": "string",
+                            "enum": [
+                                "training",
+                                "test",
+                                "validation",
+                                "reference",
+                                "benchmark",
+                                "legacy"
+                            ],
+                            "title": "ML Dataset type"
+                        },
+                        "ml-dataset:inputs-type": {
+                            "type": "string",
+                            "enum": [
+                                "text",
+                                "image",
+                                "satellite imagery",
+                                "video"
+                            ],
+                            "title": "ML Dataset Inputs type"
+                        },
+                        "ml-dataset:annotation-type": {
+                            "type": "string",
+                            "enum": [
+                                "raster",
+                                "vector"
+                            ],
+                            "title": "ML Dataset Annotations type"
+                        },
+                        "ml-dataset:quality": {
+                            "type": "string",
+                            "enum": [
+                                "L0",
+                                "L1",
+                                "L2",
+                                "L3"
+                            ],
+                            "title": "ML Dataset quality"
+                        },
+                        "ml-dataset:version": {
+                            "type": "number",
+                            "title": "ML Dataset version"
+                        },
+                        "ml-dataset:statistics": {
+                            "type": "object",
+                            "title": "ML Dataset Statistics"
+                        },
+                        "ml-dataset:splits": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fields"
+                            }
+                        },
                         "links": {
                             "type": "array",
                             "items": {
