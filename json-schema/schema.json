@@ -10,7 +10,13 @@
                 {
                     "type": "object",
                     "required": [
-                        "type"
+                        "type",
+                        "ml-dataset:name",
+                        "ml-dataset:tasks",
+                        "ml-dataset:inputs-type",
+                        "ml-dataset:annotation-type",
+                        "ml-dataset:quality",
+                        "ml-dataset:version"
                     ],
                     "properties": {
                         "type": {
