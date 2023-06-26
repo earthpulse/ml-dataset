@@ -43,7 +43,8 @@
   "ml-dataset:version": "0.1.0",
   "ml-dataset:statistics": [
     {
-      "count": 12
+      "name": "count",
+      "value": 10
     }
   ],
   "ml-dataset:type": "training",

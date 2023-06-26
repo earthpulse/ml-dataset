@@ -51,7 +51,8 @@
   ],
   "ml-dataset:statistics": [
     {
-      "count": 12
+      "name": "count",
+      "value": 10
     }
   ],
   "title": "Flood Detection Example Dataset"
