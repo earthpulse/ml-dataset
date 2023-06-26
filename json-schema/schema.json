@@ -16,6 +16,10 @@
                         "type": {
                             "const": "Catalog"
                         },
+                        "ml-dataset:name": {
+                            "type": "string",
+                            "title": "ML Dataset Name"
+                        },
                         "links": {
                             "type": "array",
                             "items": {
