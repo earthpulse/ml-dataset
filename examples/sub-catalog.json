@@ -32,7 +32,7 @@
   "ml-dataset:name": "Flood-detection-training",
   "ml-dataset:tasks": [
     "image classification",
-    "flood detection"
+    "object detection"
   ],
   "ml-dataset:inputs-type": [
     "satellite imagery"
@@ -40,7 +40,7 @@
   "ml-dataset:annotations-type": "raster",
   "ml-dataset:license": "CC-BY-4.0",
   "ml-dataset:quality": "L0",
-  "ml-dataset:version": "1.0.0",
+  "ml-dataset:version": 1.0,
   "ml-dataset:statistics": [
     {}
   ],
