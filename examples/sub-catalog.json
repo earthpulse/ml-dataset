@@ -29,7 +29,8 @@
     "flood detection",
     "image classification"
   ],
-  "ml-dataset:name": "Flood-detection-training",
+  "ml-dataset:name": "Flood-detection",
+  "ml-dataset:type": "training",
   "ml-dataset:tasks": [
     "image classification",
     "object detection"
@@ -42,10 +43,16 @@
     {
       "name": "quality",
       "value": "L1"
+    },
+    {
+      "name": "precision",
+      "value": 0.9
+    },
+    {
+      "name": "duplicates",
+      "value": false
     }
   ],
-  "ml-dataset:quality": "L0",
   "ml-dataset:version": "0.1.0",
-  "ml-dataset:type": "training",
   "title": "Flood Detection Example Training Dataset"
 }
