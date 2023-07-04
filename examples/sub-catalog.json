@@ -38,7 +38,12 @@
     "satellite imagery"
   ],
   "ml-dataset:annotations-type": "raster",
-  "ml-dataset:license": "CC-BY-4.0",
+  "ml-dataset:quality-metrics": [
+    {
+      "name": "quality",
+      "value": "L1"
+    }
+  ],
   "ml-dataset:quality": "L0",
   "ml-dataset:version": "0.1.0",
   "ml-dataset:type": "training",

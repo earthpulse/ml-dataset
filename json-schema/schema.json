@@ -15,7 +15,7 @@
                         "ml-dataset:tasks",
                         "ml-dataset:inputs-type",
                         "ml-dataset:annotations-type",
-                        "ml-dataset:quality",
+                        "ml-dataset:quality-metrics",
                         "ml-dataset:version"
                     ],
                     "properties": {
@@ -71,19 +71,24 @@
                             ],
                             "title": "ML Dataset Annotations type"
                         },
-                        "ml-dataset:quality": {
-                            "type": "string",
-                            "enum": [
-                                "L0",
-                                "L1",
-                                "L2",
-                                "L3"
-                            ],
-                            "title": "ML Dataset quality"
+                        "ml-dataset:quality-metrics": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            },
+                            "additionalItems": true,
+                            "title": "ML Dataset quality metrics"
                         },
                         "ml-dataset:version": {
                             "type": "string",
                             "title": "ML Dataset version"
+                        },
+                        "ml-dataset:splits": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fields"
+                            },
+                            "title": "ML Dataset splits"
                         },
                         "links": {
                             "type": "array",
@@ -167,19 +172,24 @@
                     ],
                     "title": "ML Dataset Annotations type"
                 },
-                "ml-dataset:quality": {
-                    "type": "string",
-                    "enum": [
-                        "L0",
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "title": "ML Dataset quality"
+                "ml-dataset:quality-metrics": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    },
+                    "additionalItems": true,
+                    "title": "ML Dataset quality metrics"
                 },
                 "ml-dataset:version": {
                     "type": "string",
                     "title": "ML Dataset version"
+                },
+                "ml-dataset:splits": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/fields"
+                    },
+                    "title": "ML Dataset splits"
                 }
             },
             "patternProperties": {
