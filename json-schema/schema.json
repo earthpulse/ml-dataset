@@ -157,12 +157,6 @@
                       }
                     ]
                   },
-                  "links": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/definitions/link_fields"
-                    }
-                  },
                   "assets": {
                     "type": "object",
                     "additionalProperties": {
