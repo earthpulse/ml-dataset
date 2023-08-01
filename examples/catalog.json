@@ -46,12 +46,9 @@
   ],
   "ml-dataset:version": "0.1.0",
   "ml-dataset:splits": [
-    {
-      "href": "flood-detection-training/catalog.json",
-      "rel": "child",
-      "title": "training",
-      "type": "application/json"
-    }
+    "Training",
+    "Validation",
+    "Test"
   ],
   "title": "Flood Detection Example Dataset"
 }

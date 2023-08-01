@@ -15,7 +15,6 @@
                         "ml-dataset:tasks",
                         "ml-dataset:inputs-type",
                         "ml-dataset:annotations-type",
-                        "ml-dataset:quality-metrics",
                         "ml-dataset:version"
                     ],
                     "properties": {
@@ -86,7 +85,7 @@
                         "ml-dataset:splits": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/fields"
+                                "type": "string"
                             },
                             "title": "ML Dataset splits"
                         },
@@ -102,7 +101,81 @@
                     "$ref": "#/definitions/stac_extensions"
                 }
             ]
-        }
+        },
+        {
+            "$comment": "This is the schema for STAC Collections.",
+            "allOf": [
+                {
+                    "type": "object",
+                    "required": [
+                        "type",
+                        "ml-dataset:split-items"
+                    ],
+                    "properties": {
+                        "type": {
+                            "const": "Collection"
+                        },
+                        "ml-dataset:split-items": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            },
+                            "title": "ML Dataset Items that conform the splits"
+                        }
+                    }
+                },
+                {
+                    "$ref": "#/definitions/stac_extensions"
+                }
+            ]
+        },
+        {
+            "$comment": "This is the schema for STAC Items.",
+            "allOf": [
+              {
+                "type": "object",
+                "required": [
+                  "type",
+                  "properties",
+                  "links",
+                  "assets"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "Feature"
+                  },
+                  "properties": {
+                    "allOf": [
+                      {
+                        "$comment": "Require fields here for item properties.",
+                        "required": [
+                          " ml-dataset:split"
+                        ]
+                      },
+                      {
+                        "$ref": "#/definitions/fields"
+                      }
+                    ]
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/link_fields"
+                    }
+                  },
+                  "assets": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/definitions/fields"
+                    }
+                  }
+                }
+              },
+              {
+                "$ref": "#/definitions/stac_extensions"
+              }
+            ]
+          }
     ],
     "definitions": {
         "stac_extensions": {
@@ -187,9 +260,20 @@
                 "ml-dataset:splits": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/fields"
+                        "type": "string"
                     },
                     "title": "ML Dataset splits"
+                },
+                "ml-dataset:split-items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    },
+                    "title": "ML Dataset Items that conform the split"
+                },
+                "ml-dataset:split": {
+                    "type": "string",
+                    "title": "ML Dataset name of the split the Item is included"
                 }
             },
             "patternProperties": {

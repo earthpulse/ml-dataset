@@ -1,7 +1,7 @@
 # Machine Learning Dataset Extension Specification
 
 - **Title:** Machine Learning Dataset
-- **Identifier:** <https://stac-extensions.github.io/ml-dataset/v1.0.0/schema.json>
+- **Identifier:** <https://raw.githubusercontent.com/earthpulse/ml-dataset/main/json-schema/schema.json>
 - **Field Name Prefix:** ml-dataset
 - **Scope:** Catalog
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
@@ -13,7 +13,6 @@ the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec)
 
 - Examples:
   - [Catalog example](examples/catalog.json): Shows the basic usage of the extension in a STAC Catalog
-  - [Sub Catalog example](examples/sub-catalog.json): Shows the basic usage of the extension in a STAC Sub Catalog
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
@@ -21,8 +20,8 @@ the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec)
 
 The fields in the table below can be used in these parts of STAC documents:
 - [x] Catalogs
-- [ ] Collections
-- [ ] Item Properties (incl. Summaries in Collections)
+- [x] Collections
+- [x] Item Properties
 - [ ] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
@@ -30,12 +29,13 @@ The fields in the table below can be used in these parts of STAC documents:
 | -------------------- | ------------------------- | ----------- |
 | ml-dataset:name   | string                    | The name of the dataset |
 | ml-dataset:tasks | array                 | List of (suggested) tasks that can be solved with the dataset |
-| ml-dataset:type  | string    | Type of the dataset. Can be Training, test, validation, Reference, benchmark, legacy |
 | ml-dataset:inputs-type | string | Type of the inputs (text, image, satellite image, video, ... or combination) |
 | ml-dataset:annotations-type | string | Type of annotations (raster, vector, ...) (not present for unsupervised learning) |
-| ml-dataset:quality | string | Quality level of the dataset |
-| ml-dataset:version | float | Dataset version |
-| ml-dataset:statistics | **TO DO** | Important values for describing the dataset at a high level and discover potential issues  like biases or data imbalance. |
+| ml-dataset:quality-metrics | array | List of quality metrics that define the quality of the dataset |
+| ml-dataset:version | string | Dataset version |
+| ml-dataset:splits | array | List of the splits names. Suggested are Training, Validation, Test, Legacy, Benchmark |
+| ml-dataset:split-items | array | List of the `Items` that conform the split |
+| ml-dataset:split | string | Name of the split the `Item` is included |
  
 ### Additional Field Information
 
